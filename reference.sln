@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnector", "DBConnector\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnector.Tests", "DBConnector.Tests\DBConnector.Tests.csproj", "{3A39DB22-D091-46E9-9FBE-EA99082F4DF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{E468F0A6-2F83-49A5-9900-A27F38562614}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{3A39DB22-D091-46E9-9FBE-EA99082F4DF9}.Release|x64.Build.0 = Release|Any CPU
 		{3A39DB22-D091-46E9-9FBE-EA99082F4DF9}.Release|x86.ActiveCfg = Release|Any CPU
 		{3A39DB22-D091-46E9-9FBE-EA99082F4DF9}.Release|x86.Build.0 = Release|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Debug|x64.Build.0 = Debug|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Debug|x86.Build.0 = Debug|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Release|x64.ActiveCfg = Release|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Release|x64.Build.0 = Release|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Release|x86.ActiveCfg = Release|Any CPU
+		{E468F0A6-2F83-49A5-9900-A27F38562614}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
