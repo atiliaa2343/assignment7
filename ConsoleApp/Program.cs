@@ -24,3 +24,58 @@ if (string.IsNullOrEmpty(connectionString))
     return;
 }
 
+/ Create connector based on type
+IDBConnector? connector = null;
+try
+{
+    if (dbType == "mongodb")
+    {
+        connector = new MongoConnector(connectionString);
+        Console.WriteLine("MongoDB connector created.");
+    }
+    else if (dbType == "postgresql")
+    {
+        connector = new PostgresConnector(connectionString);
+        Console.WriteLine("PostgreSQL connector created.");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Error creating connector: {ex.Message}");
+    return;
+}
+
+// REPL loop
+Console.WriteLine();
+Console.WriteLine("REPL started. Available commands:");
+Console.WriteLine("  ping - Test database connection");
+Console.WriteLine("  exit - Exit the REPL");
+Console.WriteLine();
+
+while (true)
+{
+    Console.Write("> ");
+    var command = Console.ReadLine()?.Trim().ToLower();
+
+    if (string.IsNullOrEmpty(command))
+        continue;
+
+    if (command == "exit")
+    {
+        Console.WriteLine("Exiting REPL...");
+        break;
+    }
+
+    if (command == "ping")
+    {
+        if (connector != null)
+        {
+            var result = await connector.ping();
+            Console.WriteLine($"Ping result: {(result ? "Success" : "Failed")}");
+        }
+    }
+    else
+    {
+        Console.WriteLine($"Unknown command: {command}. Available commands: ping, exit");
+    }
+}
