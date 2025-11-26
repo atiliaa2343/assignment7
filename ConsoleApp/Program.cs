@@ -24,7 +24,7 @@ if (string.IsNullOrEmpty(connectionString))
     return;
 }
 
-/ Create connector based on type
+// Create connector based on type
 IDBConnector? connector = null;
 try
 {
@@ -43,6 +43,22 @@ catch (Exception ex)
 {
     Console.WriteLine($"Error creating connector: {ex.Message}");
     return;
+}
+
+// Automatically ping the database to test connection
+Console.WriteLine();
+Console.WriteLine("Testing database connection...");
+if (connector != null)
+{
+    var pingResult = await connector.ping();
+    if (pingResult)
+    {
+        Console.WriteLine("✓ Connection successful!");
+    }
+    else
+    {
+        Console.WriteLine("✗ Connection failed!");
+    }
 }
 
 // REPL loop
